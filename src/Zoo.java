@@ -47,9 +47,32 @@ public class Zoo {
  public int searchAnimal(Animal animal) {
   for (int i = 0; i < animal_counter; i++) {
    if (animals[i].name.equals(animal.name)) {
-    return i; // Returns the index of the animal if found
+    return i;
    }
   }
-  return -1; // Returns -1 if the animal is not found
+  return -1;
  }
+ public boolean removeAnimal(Animal animal) {
+  int index = searchAnimal(animal);
+
+
+  if (index != -1) {
+
+   for (int i = index; i < animal_counter - 1; i++) {
+    animals[i] = animals[i + 1];
+   }
+
+   animals[animal_counter - 1] = null;
+
+   animal_counter--;
+   System.out.println("L'animal a été supprimé du zoo.");
+   return true;
+  } else {
+   System.out.println("L'animal n'a pas été trouvé dans le zoo, impossible de le supprimer.");
+   return false;
+  }
+ }
+
 }
+
+

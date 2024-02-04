@@ -50,7 +50,7 @@ public class ZooManagment {
         System.out.println(id);*/
         //---------------------------------------------------------------------------------------------------
         //---------------------------------------------Instruction 12: ----------------------------------------
-
+        /*
         int a=0;
         a=myZoo.searchAnimal(tiger);
         if(myZoo.nbrCages<=25) {
@@ -65,8 +65,11 @@ public class ZooManagment {
 
         }
         else
-            System.out.println("zoo is full");
+            System.out.println("zoo is full"); */
         //---------------------------------------------------------------------------------------------------
+        //---------------------------------------------Instruction 13: ----------------------------------------
+        myZoo.removeAnimal(lion);
+
 
     }
 
